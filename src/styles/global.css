@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
+
+body {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 1rem 1rem;
+  height: 100vh;
+}
+
+html.dark {
+  background-color: #16161a;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  margin-top: 0.4rem;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #00539f;
+}
+
+.nav-links {
+  width: 60%;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #00539f;
+  border-radius: 8px;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
